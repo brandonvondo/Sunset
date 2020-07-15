@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>xaBv Sunset Hills Coding Challenge</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        .maincontainer{
+            margin-top:0 auto;
+            border:1px solid black;
+            padding:25px;
+        }
+        .btnwide{
+            margin-left:100px;
+            width:50%;
+        }
+        #soafout{
+            width:100%;
+        }
+        .inph{
+            margin-top:2%;
+            margin-bottom:2%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="/Index.html">Sunset Hills</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Solve.html" title="The App">Solve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Code.html" title="Project Code Display">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/brandonvondo" target="_blank" title="My GitHub">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://xabv.netlify.app/" target="_blank" title="My Dev Portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" title="Coming Soon"> Blog Post/YouTube Explanation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">Sunset Hills</h1>
+                <p class="lead">Sunset Hills allows the user to input an array of up to 8 building heights. They will be determined in order of input in an array. It will determine which buildings can see the sun.</p>
+                <hr />
+
+
+            </div>
+        </div>
+        <div class="row text-center inph">
+            <div class="col">
+                <input id="inp1" class="inp" placeholder="Enter num1" />
+            </div>
+            <div class="col">
+                <input id="inp2" class="inp" placeholder="Enter num2" />
+            </div>
+            <div class="col">
+                <input id="inp3" class="inp" placeholder="Enter num3" />
+            </div>
+            <div class="col">
+                <input id="inp4" class="inp" placeholder="Enter num4" />
+            </div>
+        </div>
+        <div class="row text-center inph">
+            <div class="col">
+                <input id="inp5" class="inp" placeholder="Enter num5" />
+            </div>
+            <div class="col">
+                <input id="inp6" class="inp" placeholder="Enter num6" />
+            </div>
+            <div class="col">
+                <input id="inp7" class="inp" placeholder="Enter num7" />
+            </div>
+            <div class="col">
+                <input id="inp8" class="inp" placeholder="Enter num8" />
+            </div>
+        </div>
+        <div class="row maincontainer">
+            <div class="col-6">
+                <button id="sshbtn" class="btn btn-dark btnwide">Who sees the sunset?</button>
+            </div>
+            <div class="col-6">
+                <button id="btnclear" class="btn btn-warning btnwide">Clear</button>
+            </div>
+        </div>
+    </div>
+        <hr />
+
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p id="sshout"></p>
+            </div>
+        </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+    $(".inp").on("keydown", function (e) { /*simple input verification that allows numbers tab and backspace*/
+       return ((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105) || e.keyCode == 8 || e.keyCode == 9);
+    });
+
+    $("#sshbtn").on("click", function () {
+
+        if ($("#inpk").val() != "") { /*check to see if the user left a field blank*/
+            var bheight = [ /*creating an array with our 8 input values*/
+            Number($("#inp1").val()),
+            Number($("#inp2").val()),
+            Number($("#inp3").val()),
+            Number($("#inp4").val()),
+            Number($("#inp5").val()),
+            Number($("#inp6").val()),
+            Number($("#inp7").val()),
+            Number($("#inp8").val())
+    ]
+
+    var bhigh = bheight[0]; /*setting our highest variable to the starting value of our array as the first building always sees the sun*/
+    var output = [bhigh]; /*putting our starting building into our output array and also defining our output array*/
+
+
+            for (let loop = 1; loop < bheight.length; loop++) { /*setting up a for loop to runthrough all of our building height inputs*/
+                if (bheight[loop] > bhigh) { /*checking if the input we are currently on is higher than our previous high*/
+                bhigh = bheight[loop]; /*if it is we take the current loop value along with the name of our original array and give it to the variable bhigh*/
+                output.push(bhigh); /*lastly we push bhigh into our output array for later*/
+                };
+            };
+            $("#sshout").html(`There are ${output.length} building(s) that can see the sun, and those are as follows: ${output}.`) /*here we print how many/ which buildings can see the sun*/
+        }
+    else $("#sshout").html(`Please enter real numbers.`) /*input validation for blank spaces*/
+    });
+
+    $("#btnclear").on("click", function () { /*simple button to clear the results and the input field*/
+        $(".inp").val("");
+        $("#sshout").text("");
+    });
+    </script>
+</body>
+
+</html>
