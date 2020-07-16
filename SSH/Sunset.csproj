@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Code.html" />
+    <Content Include="favicon.ico" />
     <Content Include="Index.html" />
     <Content Include="CSS\prism.css" />
     <Content Include="JS\prism.js" />
