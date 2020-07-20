@@ -1,0 +1,268 @@
+﻿@font-face {
+    font-family: 'Polgnpwr';
+    src: url('../fonts/Polgnpwr.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Sunset Boulevard';
+    src: url('../fonts/BillionaireMediumGrunge.ttf') format('truetype');
+}
+
+body {
+    background: linear-gradient(to top, #040308, #AD4A28, #DD723C, #FC7001, #DCB697, #9BA5AE, #3E5879, #020B1A);
+}
+
+.maincontainer {
+    margin-top: 0 auto;
+    border: 1px solid black;
+    padding: 25px;
+}
+
+.btnwide {
+    margin-left: 100px;
+    width: 50%;
+}
+
+.inph {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.maincontainer {
+    margin-top: 0 auto;
+    border: 1px solid black;
+    padding: 25px;
+    background-color: #62727A;
+}
+
+.btnwide {
+    margin-left: 100px;
+    width: 50%;
+}
+
+#soafout {
+    width: 50%;
+    margin: 50px auto;
+}
+
+.inph {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+.header {
+    padding: 60px;
+    text-align: center;
+    color: #FFC466;
+    font-size: 80px;
+    background-color: #3D4247;
+    font-family: 'Polgnpwr';
+}
+
+.header2 {
+    padding: 10px;
+    text-align: center;
+    color: #FFC466;
+    font-size: 80px;
+    background-color: #3D4247;
+    font-family: 'Polgnpwr';
+}
+
+.navtext {
+    color: #FFC466;
+    font-size: 20px;
+    font-family: 'Sunset Boulevard';
+}
+
+.navtext2 {
+    color: dimgrey;
+    font-size: 20px;
+    font-family: 'Sunset Boulevard'
+}
+
+.navtext3 {
+    color: #FFC466;
+    font-size: 20px;
+    font-family: 'Sunset Boulevard';
+    margin: 50% auto;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.dropup {
+    list-style: none;
+    background: #3D4247;
+    padding: 8px;
+    display: inline-block;
+}
+
+.dropdown .nav-link {
+    color: #3D4247;
+    text-decoration: none;
+}
+
+.dropdown .dropdown-menu a {
+    color: #3D4247;
+    background-color: #3D4247;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    background-color: #3D4247;
+}
+
+    .dropdown-menu .dropdown-item {
+        display: inline-block;
+        background-color: #3D4247;
+        width: 100%;
+        padding: 10px 5px;
+    }
+
+.container .dropdown .dropdown-menu a:hover {
+    color: #fff;
+    background-color: #b91773;
+    background-color: #3D4247;
+    border-color: #fff;
+}
+
+.dropdown-divider {
+    background-color: #FFC466;
+    color: #FFC466;
+}
+
+.bodyp {
+    font-size: 40px;
+    font-family: 'Sunset Boulevard';
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    background-color: #3D4247;
+    opacity: .7;
+    color: #FFC466;
+}
+
+.bodyp2 {
+    font-size: 40px;
+    font-family: 'Sunset Boulevard';
+    margin-top: 1%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    background-color: #3D4247;
+    opacity: .7;
+    color: #FFC466;
+}
+
+#inpk {
+    padding: 1px;
+    text-align: center;
+    background-color: #3D4247;
+    font-family: 'Sunset Boulevard';
+    color: #FFC466;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+.inp {
+    padding: 1px;
+    text-align: center;
+    background-color: #62727A;
+    font-family: 'Sunset Boulevard';
+    color: #FFC466;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: none;
+    width: 70%;
+}
+
+#inpk::placeholder {
+    color: #61363D;
+}
+
+.inp::placeholder {
+    color: #EF8A45;
+}
+
+.centerforce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html {
+    height: 100%;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0ch;
+    }
+
+    to {
+        width: 16ch;
+    }
+}
+
+.bg-grey {
+    background-color: #3D4247;
+}
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #3D4247;
+    border: solid 1px black;
+    color: #FFC466;
+    font-family: 'Sunset Boulevard';
+    font-size: 30px;
+}
+
+#panel {
+    padding: 50px;
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+#sshbtn:hover {
+    color: #FFC466 !important;
+}
+
+#btnclear:hover {
+    color: #3D4247 !important;
+}
+
+#sshbtn:focus {
+    color: #FFC466 !important;
+}
+
+#btnclear:focus {
+    color: #3D4247 !important;
+}
+
+#sshbtn {
+    background-color: #3D4247;
+    color: #FFC466;
+    font-family: 'Sunset Boulevard';
+    font-size: 20px;
+}
+
+#btnclear {
+    background-color: #FFC466;
+    color: #3D4247;
+    font-weight: bold;
+    font-family: 'Sunset Boulevard';
+    font-size: 20px;
+}
+
+.outpute {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+}
